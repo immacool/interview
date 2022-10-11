@@ -5,6 +5,7 @@ import random
 # с одного конца списка. То есть вставка будет происходить в конец списка, а удаление -
 # из конца списка.
 
+
 class Stack:
     ''' Основной класс стека '''
 
@@ -25,12 +26,13 @@ class Stack:
 
     def peek(self):
         ''' Возвращает последний элемент списка '''
-        return self.items[len(self.items)-1]
+        return self.items[len(self.items) - 1]
 
     def size(self):
         ''' Возвращает размер стека '''
         return len(self.items)
-    
+
+
 if __name__ == "__main__":
     # Тест класса Stack
     s = Stack()

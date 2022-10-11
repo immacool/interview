@@ -6,10 +6,12 @@ import random
 # - быстрой, т.е. для одного ключа должно выполняться за константное время.
 # - равномерной, т.е. для разных ключей должны получаться разные индексы.
 
+
 def codes_sum(key, size):
     # Реализация хэш-функции: сумма кодов символов ключа по модулю размера таблицы.
     # Сложность: O(n).
     return sum(ord(char) for char in key) % size
+
 
 def polynomial_hash(key, size):
     # Реализация хэш-функции: полиномиальный хэш.
@@ -18,6 +20,7 @@ def polynomial_hash(key, size):
     for char in key:
         hash = (hash * 31 + ord(char)) % size
     return hash
+
 
 if __name__ == "__main__":
     size = 100

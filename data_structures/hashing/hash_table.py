@@ -18,8 +18,10 @@ from hash_function import codes_sum, polynomial_hash
 # чем деревья, поскольку хеш-таблицы работают быстрее.
 # Однако ее можно реализовать и самостоятельно в виде класса. Ниже приведен пример реализации.
 
+
 class HashTable:
     ''' Хеш-таблица '''
+
     def __init__(self, size=10, hash_func=None):
         self.size = size
         # Листы для хранения ключей и значений
@@ -30,16 +32,16 @@ class HashTable:
             self.hash_func = codes_sum
         else:
             self.hash_func = hash_func
-            
+
     def rehash(self, old_hash):
         ''' Перехеширование '''
         return (old_hash + 1) % self.size
-        
+
     def put(self, key: str, data):
         ''' Добавление пары ключ-значение '''
         # Получаем индекс в массиве
         hashvalue = self.hash_func(key, self.size)
-        
+
         # Если в слоте нет значения, то добавляем ключ и значение
         if self.slots[hashvalue] == None:
             self.slots[hashvalue] = key
@@ -54,7 +56,8 @@ class HashTable:
                 # Линейное пробирование - это метод разрешения коллизий, при котором при
                 # коллизии мы просто переходим к следующему слоту и проверяем его на пустоту.
                 nextslot = self.rehash(hashvalue)
-                while self.slots[nextslot] != None and self.slots[nextslot] != key:
+                while self.slots[nextslot] != None and self.slots[
+                        nextslot] != key:
                     # Пока не найдем пустой слот или слот с таким же ключом
                     # переходим к следующему слоту
                     nextslot = self.rehash(nextslot)
@@ -64,12 +67,12 @@ class HashTable:
                     self.data[nextslot] = data
                 else:
                     self.data[nextslot] = data
-                    
+
     def get(self, key):
         ''' Получение значения по ключу '''
         # Получаем индекс в листе
         startslot = self.hash_func(key, len(self.slots))
-        
+
         data = None
         stop = False
         found = False
@@ -87,12 +90,12 @@ class HashTable:
                 if position == startslot:
                     stop = True
         return data
-    
+
     def remove(self, key):
         ''' Удаление пары ключ-значение '''
         # Получаем индекс в листе
         startslot = self.hash_func(key, len(self.slots))
-        
+
         data = None
         stop = False
         found = False
@@ -111,62 +114,59 @@ class HashTable:
                 if position == startslot:
                     stop = True
         return data
-    
+
     def __contains__(self, key):
         ''' Проверка наличия ключа в словаре '''
         return self.get(key) != None
-    
+
     def __getitem__(self, key):
         ''' Получение значения по ключу '''
         return self.get(key)
-    
+
     def __setitem__(self, key: str, data):
         ''' Добавление пары ключ-значение '''
         self.put(key, data)
-        
-    
+
 
 if __name__ == '__main__':
     # Создание хеш-таблиц
     h = HashTable(hash_func=codes_sum)
     h2 = HashTable(hash_func=polynomial_hash)
-    
+
     print('Хеш-функция: codes_sum')
     # Вставка пар ключ-значение
     h['one'] = 1
     h['two'] = 2
     h['three'] = 3
-    
+
     # Получение значения по ключу
     print(h['one'])
     print(h['two'])
     print(h['three'])
-    
+
     # Перезапись значения
     h['one'] = 11
     print(h['one'])
-    
+
     # Удаление пары ключ-значение
     h.remove('one')
     print(h['one'])
-    
+
     print('Хеш-функция: polynomial_hash')
     # Вставка пар ключ-значение
     h2['one'] = 1
     h2['two'] = 2
     h2['three'] = 3
-    
+
     # Получение значения по ключу
     print(h2['one'])
     print(h2['two'])
     print(h2['three'])
-    
+
     # Перезапись значения
     h2['one'] = 11
     print(h2['one'])
-    
+
     # Удаление пары ключ-значение
     h2.remove('one')
     print(h2['one'])
-    
-    

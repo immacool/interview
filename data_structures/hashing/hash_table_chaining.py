@@ -14,7 +14,9 @@ from hash_function import codes_sum
 # В качестве хэш-функции для хэш-таблицы с цепочками используется функция codes_sum,
 # которая возвращает сумму кодов символов строки.
 
+
 class HashTableChaining:
+
     def __init__(self, size):
         self.size = size
         self.hash_table = [[] for _ in range(self.size)]
@@ -60,21 +62,27 @@ class HashTableChaining:
         else:
             print('Ключ {} не найден'.format(key))
 
-            
+
 if __name__ == '__main__':
     # Создаем хэш-таблицу с цепочками
     hash_table = HashTableChaining(256)
+
     # Добавляем элементы в хэш-таблицу
     hash_table.add('cat', '#ff0000')
     hash_table.add('dog', '#00ff00')
     hash_table.add('fish', '#0000ff')
+
     # Выводим хэш-таблицу на экран
     print(hash_table)
+
     # Получаем значение элемента из хэш-таблицы
     print(hash_table.get('dog'))
+
     # Удаляем элемент из хэш-таблицы
     hash_table.delete('dog')
+
     # Выводим хэш-таблицу на экран
     print(hash_table)
+
     # Получаем значение элемента из хэш-таблицы
     print(hash_table.get('dog'))
