@@ -169,7 +169,7 @@ class heap:
         newitem = self.heap[pos]
         # Follow the path to the root, moving parents down until finding a place
         # newitem fits.
-        while pos > startpos
+        while pos > startpos:
             parentpos = (pos - 1) >> 1
             parent = self.heap[parentpos]
             if newitem < parent:
