@@ -43,6 +43,7 @@ def breadth_first_search(graph: Graph, start: Node, end: Node) -> List[Node]:
 if __name__ == "__main__":
     import networkx as nx
     import matplotlib.pyplot as plt
+    
     # Создаем граф.
     graph = Graph()
     graph.fill_graph(10, 15) 

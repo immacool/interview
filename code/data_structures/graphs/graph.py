@@ -1,4 +1,5 @@
 import random
+from typing import List
 
 # Граф - это набор вершин и ребер, соединяющих эти вершины между собой
 # Вершина - это узел графа, ребро - это связь между двумя вершинами.
@@ -23,7 +24,7 @@ class Node:
     
 class Graph:
     def __init__(self):
-        self.nodes = []
+        self.nodes: List[Node] = []
         self.edges = []
         
     def add_node(self, value):

@@ -21,8 +21,8 @@
   - [ ] [Дерево сбалансированное на куче](code/data_structures/trees/heap.py)
 - Графы
   - [x] [Граф](code/data_structures/graphs/graph.py)
-  - [ ] [Граф с весами](code/data_structures/graphs/weighted_graph.py)
-  - [ ] [Визуализация графа](code/data_structures/graphs/graph_visualization.py)
+  - [x] [Граф с весами](code/data_structures/graphs/weighted_graph.py)
+  - [x] [Визуализация графа](code/data_structures/graphs/graph_visualization.py)
 
 ## Алгоритмы
 
@@ -35,7 +35,7 @@
   - [x] [Сортировка подсчётом](code/algorithms/sorting/counting_sort.py)
 - Поиск
   - [x] [Бинарный поиск](code/algorithms/searching/binary_search.py)
-  - [ ] [Поиск в ширину](code/algorithms/searching/breadth_first_search.py)
+  - [x] [Поиск в ширину](code/algorithms/searching/breadth_first_search.py)
   - [ ] [Поиск в глубину](code/algorithms/searching/depth_first_search.py)
   - [ ] [Поиск в глубину с рекурсией](code/algorithms/searching/depth_first_search_recursive.py)
   - [ ] [Поиск в глубину с рекурсией и стеком](code/algorithms/searching/depth_first_search_recursive_with_stack.py)
