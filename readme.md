@@ -7,15 +7,16 @@
   - [x] [Хэш-таблица](code/data_structures/hashing/hash_table.py)
   - [x] [Хэш-функция](code/data_structures/hashing/hash_function.py)
   - [x] [Хэш-таблица с открытой адресацией](code/data_structures/hashing/hash_table_open_addressing.cpp)
-  - [ ] [Хэш-таблица с цепочками](code/data_structures/hashing/hash_table_chaining.py)
+  - [ ] [Хэш-таблица с цепочками](code/data_structures/hashing/hash_table_chaining.py) (необходима доработка)
   - [x] [Хэш-сет](code/data_structures/hashing/hash_set.py)
 - Очереди
   - [x] [Очередь](code/data_structures/queues/queue.py)
   - [x] [Очередь с приоритетом](code/data_structures/queues/priority_queue.py)
-  - [ ] [Очередь с приоритетом на куче](code/data_structures/queues/priority_queue_heap.py)
+  - [ ] [Очередь с приоритетом на куче](code/data_structures/queues/priority_queue_heap.py) (в разработке)
   - [x] [Стек](code/data_structures/queues/stack.py)
 - Деревья
-  - [ ] [Дерево](code/data_structures/trees/tree.py)
+  - [x] [Дерево](code/data_structures/trees/tree.py) (необходима доработка)
+  - [ ] [Визуализация дерева](code/data_structures/trees/tree_visualization.py) (в разработке)
   - [ ] [Дерево поиска](code/data_structures/trees/binary_search_tree.py)
   - [ ] [Дерево сбалансированное](code/data_structures/trees/red_black_tree.py)
   - [ ] [Дерево сбалансированное на куче](code/data_structures/trees/heap.py)
@@ -36,7 +37,7 @@
 - Поиск
   - [x] [Бинарный поиск](code/algorithms/searching/binary_search.py)
   - [x] [Поиск в ширину](code/algorithms/searching/breadth_first_search.py)
-  - [ ] [Поиск в глубину](code/algorithms/searching/depth_first_search.py)
+  - [ ] [Поиск в глубину](code/algorithms/searching/depth_first_search.py) (в разработке)
   - [ ] [Поиск в глубину с рекурсией](code/algorithms/searching/depth_first_search_recursive.py)
   - [ ] [Поиск в глубину с рекурсией и стеком](code/algorithms/searching/depth_first_search_recursive_with_stack.py)
 - Остальное
