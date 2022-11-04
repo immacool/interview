@@ -49,5 +49,7 @@
   - [ ] [Алгоритм Краскала](code/algorithms/other/kruskal.py)
   - [ ] [Алгоритм Прима](code/algorithms/other/prims.py)
   - [ ] [Алгоритм Беллмана-Форда](code/algorithms/other/bellman_ford.py)
-  - [ ] [Алгоритм Хеллингса](code/algorithms/other/hellings.py)
-  - [ ] [Алгоритм Хеллингса с помощью динамического программирования](code/algorithms/other/hellings_dynamic.py)
+  - [x] [Алгоритм Хеллингса](code/algorithms/other/hellings.py) (не протестирован)
+- Особое
+  - [x] [Коллапс Волновой Функции](code/algorithms/special/wave_function_collapse.py)
+  - [x] [Цепи Маркова](code/algorithms/special/markov_chains.py)
